@@ -1,0 +1,20 @@
+import "AprilTags.idsl";
+import "Laser.idsl";
+import "DifferentialRobot.idsl";
+import "RCISMousePicker.idsl";
+import "GotoPoint.idsl";
+
+Component chocachoca
+{
+	Communications
+	{
+		requires Laser, DifferentialRobot;
+		subscribesTo RCISMousePicker;
+		implements GotoPoint;
+		subscribesTo AprilTags;
+	};
+	language Cpp;
+	gui Qt(QWidget);
+	
+};
+
